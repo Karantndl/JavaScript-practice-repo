@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <button class="heads" onclick="heads();"> Heads </button>
+    <button class="tails" onclick="tails();"> Tails </button>
+    <p class="decision"></p>
+
+
+
+
+    <input type="text" placeholder="Submit" class="user_input">
+    <button class="btn_submit" onclick="submit();">Submit </button>
+    <p class="user_output"></p>
+
+
+
+
+
+
+
+    <script>
+
+       
+
+        function submit(){
+        const user_inputElement = document.querySelector('.user_input');
+        const JSONstingy = JSON.stringify(user_inputElement.value)
+        const user_outputElement = document.querySelector('.user_output');
+        user_outputElement.innerHTML = 'Your name is ' + JSONstingy;
+
+        }
+
+
+
+
+
+
+
+        
+
+        function heads(){
+            const head = document.querySelector('.decision');
+            head.innerHTML = 'You choose: Heads'
+        }
+
+        function tails(){
+            const tail = document.querySelector('.decision');
+            tail.innerHTML = 'You choose: Tails'
+        }
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
